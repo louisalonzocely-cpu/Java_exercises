@@ -25,6 +25,7 @@ public class numeroMayorYmenor {
 
                 //ciclo de validacion
                 do {
+                    
                     IO.print("-> Ingrese numero "+i+": ");
                     String linea = console.nextLine();
                 
@@ -32,9 +33,11 @@ public class numeroMayorYmenor {
                     try {
                     num = Integer.parseInt(linea);
                     datoValido = true;
+                        
                     } catch (Exception e) {
                         System.err.println("Entrada no valida. Debe ingresar un numero.");
                     }
+                    
                 } while (!datoValido);
                     
                 //Condicion 1
