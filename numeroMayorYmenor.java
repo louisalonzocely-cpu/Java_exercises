@@ -1,8 +1,10 @@
+/*Programa que permite ingresar por consola 5 numeros y 
  * por medio de esta determinar cual es el numero menor de todos 
  * y el numero mayor de todos. En el caso de ser iguales los numeros
  * envia un mensaje y en el caso de el usuario ingresar un dato no numerico
  * mostrar un mesaje de dato invalido y volver a solicitar el dato.
  */
+
 import java.util.Scanner;
 
 public class numeroMayorYmenor {
