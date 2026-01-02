@@ -63,12 +63,36 @@ public class PaymentService {
         }
     }
 
+    //method to check a payment
+    public void checkPayment(ArrayList<Payment> payments) {
+        
+        IO.println("\n-> Check payment:");
+
+        int id = validatingNumericData("Id to consult: ");
+
+        for (Payment payment : payments) {
+            if (payment.getId() == id) {
+                IO.println(payment);
+                return;
+            }
+        }
+        IO.println("Payment not recorded.");
+    }
+
     //method for registering a payment
     public void registeringPayment(ArrayList<Payment> payments) {
 
         IO.println("\n-> Register payment:");
 
         int id = validatingNumericData("Payment Id: ");
+
+        for (Payment payment : payments) {
+            if (payment.getId() == id) {
+               IO.println("ERROR: Payment id already registered.");
+               return;
+            }
+        }
+        
         BigDecimal amound = validatingBigDecimalData("Amound: ");
         int paymentType = validatingNumericData("Payment type (1:cash/2:card/3:transfer): ");
         String description = validateEmptyField("Description: ");
@@ -87,22 +111,6 @@ public class PaymentService {
 
         payments.add(payment);
         IO.println("Payment successfully registred.");
-    }
-
-    //method to check a payment
-    public void checkPayment(ArrayList<Payment> payments) {
-        
-        IO.println("\n-> Check payment:");
-
-        int id = validatingNumericData("Id to consult: ");
-
-        for (Payment payment : payments) {
-            if (payment.getId() == id) {
-                IO.println(payment);
-                return;
-            }
-        }
-        IO.println("Payment not recorded.");
     }
 
     //method to modify payment
