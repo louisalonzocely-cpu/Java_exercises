@@ -11,7 +11,7 @@ public class ordenamientoNumAleatorios {
         for (int i = 0; i < numAleatorios.length; i++) {
             numAleatorios[i] = aleatorios.nextInt(0,99);
             if (i == 0){
-                IO.print("\n-> Arreglo numero aleatorios:               ");
+                IO.print("\n-> Arreglo numero aleatorios: ");
             }
             IO.print("["+numAleatorios[i]+"] ");
         }
