@@ -6,32 +6,33 @@ public class mayorYmenor {
 
         var console = new Scanner(System.in);
 
-        int mayor = 0;
-        int menor = 0;
+        try {
 
-        IO.println("\n***** Numero mayor y menor de 3 numeros *****\n");
+            int mayor = 0;
+            int menor = 0;
 
-        for (int i = 1; i <= 3; i++) {
+            IO.println("\n***** Numero mayor y menor de 3 numeros *****\n");
 
-            IO.print("Ingresar #"+ i+": ");
-            var num = Integer.parseInt(console.nextLine());
+            for (int i = 1; i <= 3; i++) {
 
-            if (i == 1){
-                mayor = num;
-                menor = num;
-            } else {
-                if (num > mayor){
+                IO.print("Ingresar #"+ i+": ");
+                var num = Integer.parseInt(console.nextLine());
+
+                if (i == 1){
                     mayor = num;
-                }
-                if (num < menor){
                     menor = num;
-                }
+                } 
+
+                mayor = (num < mayor) ? mayor : num;
+                menor = (num > menor) ? menor : num;
+
             }
+            IO.println("\n-> Numero mayor: " + mayor);
+            IO.println("-> Numero menor: " + menor);
 
-        }
-        IO.println(mayor);
-        IO.println(menor);
-
+        } finally {
+            console.close();
+        }    
     }
 
 }

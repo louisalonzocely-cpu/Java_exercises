@@ -5,37 +5,43 @@ public class juegoAdivinanza {
     static void main(String[] args) {
 
         var console = new Scanner(System.in);
-        var aleatorio = new Random();
 
-        boolean validacion;
-        var cont = 1;
+        try {
 
-        IO.println("\n***** JUEGOS DE ADIVINANZAS *****");
+            var aleatorio = new Random();
 
-        do {
+            boolean validacion;
+            var cont = 1;
 
-            var numAleatorio = aleatorio.nextInt(1, 3);
+            IO.println("\n***** JUEGOS DE ADIVINANZAS *****");
 
-            IO.println("\nROUND "+cont);
+            do {
 
-            IO.print("Adivina el numero aleatorio de 1 a 3.\n");
-            IO.print("-> Ingresa el numero que crees que es el correcto: ");
-            var num = Integer.parseInt(console.nextLine());
+                var numAleatorio = aleatorio.nextInt(1, 3);
 
-            validacion = num == numAleatorio;
+                IO.println("\nROUND "+cont);
 
-            IO.println("Numero aleatorio: "+ numAleatorio);
+                IO.print("Adivina el numero aleatorio de 1 a 3.\n");
+                IO.print("-> Ingresa el numero que crees que es el correcto: ");
+                var num = Integer.parseInt(console.nextLine());
 
-            cont++;
+                validacion = num == numAleatorio;
 
-            if (validacion){
-                IO.println("Felicidades, haz ganado la partida");
-            } else {
-                IO.println("Haz perdido la partida.");
-            }
+                IO.println("Numero aleatorio: "+ numAleatorio);
 
-        } while (cont < 4);
+                cont++;
 
+                if (validacion){
+                    IO.println("Felicidades, haz ganado la partida");
+                } else {
+                    IO.println("Haz perdido la partida.");
+                }
+
+            } while (cont < 4);
+            
+        } finally {
+            console.close();
+        }
     }
 
 }
