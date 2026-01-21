@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class relojDigital {
+public class RelojDigital {
 
     public static void main(String[] args) throws InterruptedException {
         var consola = new Scanner(System.in);

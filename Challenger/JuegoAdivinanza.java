@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class juegoAdivinanza {
+public class JuegoAdivinanza {
     static void main(String[] args) {
 
         var console = new Scanner(System.in);

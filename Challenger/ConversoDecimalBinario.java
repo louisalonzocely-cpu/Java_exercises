@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class conversoDecimalBinario {
+public class ConversoDecimalBinario {
 
     public static void main(String[] args) {
         

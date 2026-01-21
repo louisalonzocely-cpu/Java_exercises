@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class mayorYmenor {
+public class MayorYmenor {
 
     static void main(String[] args) {
 

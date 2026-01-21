@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class ordenamientoNumAleatorios {
+public class OrdenamientoNumAleatorios {
     static void main(String[] args) {
 
         var aleatorios = new Random();

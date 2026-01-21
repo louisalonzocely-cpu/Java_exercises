@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class temporizador {
+public class Temporizador {
     static void main(String[] args) throws InterruptedException {
 
         var console = new Scanner(System.in);
